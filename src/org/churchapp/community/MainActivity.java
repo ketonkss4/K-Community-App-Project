@@ -83,7 +83,7 @@ public class MainActivity extends Activity {
     
     
     public void SelectItem(int possition) {
-    	 
+    	
         Fragment fragment = null;
         Bundle args = new Bundle();
         switch (possition) {
@@ -108,7 +108,7 @@ public class MainActivity extends Activity {
                           .getImgResID());
               break;
         case 3:
-              fragment = new FragmentOne();
+        	fragment = new FragmentOne();
               args.putString(FragmentOne.ITEM_NAME, dataList.get(possition)
                           .getItemName());
               args.putInt(FragmentOne.IMAGE_RESOURCE_ID, dataList.get(possition)
@@ -129,7 +129,7 @@ public class MainActivity extends Activity {
                           .getImgResID());
               break;
         case 6:
-              fragment = new FragmentOne();
+        	 fragment = new FragmentOne();
               args.putString(FragmentOne.ITEM_NAME, dataList.get(possition)
                           .getItemName());
               args.putInt(FragmentOne.IMAGE_RESOURCE_ID, dataList.get(possition)
@@ -150,7 +150,7 @@ public class MainActivity extends Activity {
                           .getImgResID());
               break;
         case 9:
-              fragment = new FragmentOne();
+        	  fragment = new FragmentOne();
               args.putString(FragmentOne.ITEM_NAME, dataList.get(possition)
                           .getItemName());
               args.putInt(FragmentOne.IMAGE_RESOURCE_ID, dataList.get(possition)
@@ -171,7 +171,7 @@ public class MainActivity extends Activity {
                           .getImgResID());
               break;
         case 12:
-              fragment = new FragmentOne();
+        	  fragment = new FragmentOne();
               args.putString(FragmentOne.ITEM_NAME, dataList.get(possition)
                           .getItemName());
               args.putInt(FragmentOne.IMAGE_RESOURCE_ID, dataList.get(possition)
@@ -182,6 +182,7 @@ public class MainActivity extends Activity {
         }
 
         fragment.setArguments(args);
+       
         FragmentManager frgManager = getFragmentManager();
         frgManager.beginTransaction().replace(R.id.content_frame, fragment)
                     .commit();

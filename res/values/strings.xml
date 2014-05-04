@@ -5,6 +5,11 @@
     <string name="hello_world">Hello world!</string>
     <string name="drawer_open">Open drawer</string>
 	<string name="drawer_close">Close drawer</string>
-    
+    <string-array name="lorem_ipsum">
+        <item>Something about the church goes here</item>
+        <item>Something about the church goes here</item>
+        <item>Something about the church goes here</item>
+        <item>Something about the church goes here</item>
+    </string-array>
 
 </resources>

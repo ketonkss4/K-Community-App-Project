@@ -9,10 +9,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
  
 public class FragmentOne extends Fragment {
- 
+		
       ImageView ivIcon;
       TextView tvItemName;
- 
+      
       public static final String IMAGE_RESOURCE_ID = "iconResourceID";
       public static final String ITEM_NAME = "itemName";
  
@@ -27,11 +27,19 @@ public class FragmentOne extends Fragment {
             View view = inflater.inflate(R.layout.fragment_layout_one, container,
                         false);
  
-            ivIcon = (ImageView) view.findViewById(R.id.frag1_icon);
-            tvItemName = (TextView) view.findViewById(R.id.frag1_text);
- 
-            tvItemName.setText("This is a test on frag 1");
-                        return view;
+            
+            
+            
+            
+            return view;
       }
- 
+      public void onActivityCreated(Bundle savedInstanceState) {
+    	  
+    	  super.onActivityCreated(savedInstanceState);
+    	  
+          
+          
+  		
+  			
+      }
 }

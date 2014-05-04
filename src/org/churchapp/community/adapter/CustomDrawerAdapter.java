@@ -7,11 +7,11 @@ import org.churchapp.community.R;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
  
 public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
@@ -19,7 +19,7 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
       Context context;
       List<DrawerItem> drawerItemList;
       int layoutResID;
- 
+      private int selectedItem;
       public CustomDrawerAdapter(Context context, int layoutResourceID,
                   List<DrawerItem> listItems) {
             super(context, layoutResourceID, listItems);
@@ -28,6 +28,10 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
             this.layoutResID = layoutResourceID;
  
       }
+      public void selectedItem(int selectedItem){
+    	  this.selectedItem = selectedItem;
+    	  notifyDataSetChanged();
+      }
  
       @Override
       public View getView(int position, View convertView, ViewGroup parent) {
@@ -35,6 +39,12 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
  
             DrawerItemHolder drawerHolder;
             View view = convertView;
+           
+            /*view = super.getView(position, convertView, parent);
+            Typeface font1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/CALIBRIB.TFF" );
+            Typeface font2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/CALIBRI.TFF" );
+            ((TextView)convertView).setTypeface(position == selectedItem ? font1:font2);*/
+            
  
             if (view == null) {
                   LayoutInflater inflater = ((Activity) context).getLayoutInflater();
@@ -59,9 +69,20 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
  
             return view;
       }
+      
+//      public View gotView(int position, View convertView, ViewGroup parent){
+//          convertView = super.getView(position, convertView, parent);
+//          Typeface tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/CALIBRIB.TTF");
+//          Typeface tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/CALIBRI.TTF");
+//          ((TextView)convertView).setTypeface(position == selectedItem ? tf1:tf2);
+//
+//          return convertView;
+//      }
+      
  
       private static class DrawerItemHolder {
             TextView ItemName;
            
       }
+      
 }

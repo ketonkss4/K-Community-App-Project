@@ -11,5 +11,39 @@
         <item>Something about the church goes here</item>
         <item>Something about the church goes here</item>
     </string-array>
+    <string-array name="data_list">
+        <item >Test String 1 </item>
+        <item >Test String 2</item>
+        <item >Test String 2</item>
+    </string-array>
+    <!-- Names -->
+    <string-array name="event_names">
+        <item>Board Meeting</item>
+        <item>Rehearsal</item>
+        <item>Pot Luck</item>
+        
+    </string-array>
+
+    <!-- Pictures -->
+    <array name="event_pics">
+        
+    </array>
+
+    <!-- Status -->
+    <string-array name="event_desc">
+        <item>monthly meeting today!</item>
+        <item>Choir practice at noon</item>
+        <item>Bring your own dish</item>
+        
+    </string-array>
+
+    <!-- contact type -->
+    <string-array name="date">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        
+    </string-array>
+    
 
 </resources>

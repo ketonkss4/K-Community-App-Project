@@ -40,10 +40,6 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
             DrawerItemHolder drawerHolder;
             View view = convertView;
            
-            /*view = super.getView(position, convertView, parent);
-            Typeface font1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/CALIBRIB.TFF" );
-            Typeface font2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/CALIBRI.TFF" );
-            ((TextView)convertView).setTypeface(position == selectedItem ? font1:font2);*/
             
  
             if (view == null) {
@@ -70,15 +66,7 @@ public class CustomDrawerAdapter extends ArrayAdapter<DrawerItem> {
             return view;
       }
       
-//      public View gotView(int position, View convertView, ViewGroup parent){
-//          convertView = super.getView(position, convertView, parent);
-//          Typeface tf1 = Typeface.createFromAsset(getContext().getAssets(), "fonts/CALIBRIB.TTF");
-//          Typeface tf2 = Typeface.createFromAsset(getContext().getAssets(), "fonts/CALIBRI.TTF");
-//          ((TextView)convertView).setTypeface(position == selectedItem ? tf1:tf2);
-//
-//          return convertView;
-//      }
-      
+
  
       private static class DrawerItemHolder {
             TextView ItemName;
